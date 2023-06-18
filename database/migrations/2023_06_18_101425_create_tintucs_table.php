@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('students', function (Blueprint $table) {
+        Schema::create('tintucs', function (Blueprint $table) {
             $table->id();
-            $table->string('MSSV');
-            $table->string('HoTen');
-            $table->boolean('GioiTinh')->nullable();
-            $table->dateTime('NgaySinh')->nullable();
-            $table->longtext('DiaChi')->nullable();
-            $table->string('SDT')->nullable();
-            $table->integer('MaLop');
+            $table->string('matintuc',50);
+            $table->string('tieude',255);
+            $table->longText('noidung');
+            $table->string('matheloai',50);
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('tintucs');
     }
 };
