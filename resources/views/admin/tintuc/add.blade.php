@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Thể loại</label>
-                <select name="matheloai" id="matheloai">
+                <select name="matheloai" id="matheloai" class="form-control">
                     @foreach ($theloais as $theloai)
                         <option value="{{ $theloai->matheloai }}">
                             {{ $theloai->tentheloai }}</option>

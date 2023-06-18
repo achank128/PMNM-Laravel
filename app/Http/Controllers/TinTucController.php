@@ -21,22 +21,24 @@ class TinTucController extends Controller
         $this->theloaiService = $theloaiService;
     }
 
+    public function index(){
+        return view('admin.tintuc.list',[
+            'title'=>'Danh sách Tin Tức',
+            'tintucs' => $this->tintucService->getList()
+        ]);
+    }
+
     public function create(){
         return view('admin.tintuc.add',[
             'title'=>'Thêm mới Tin Tức',
-            'theloais' => $this->theloaiService->getAllTheLoai()
+            'theloais' => $this->theloaiService->getAll()
         ]);
     }
     public function store(TinTucCreateRequest $request){
         $result = $this->tintucService->create($request);
         return redirect()->back();
     }
-    public function index(){
-        return view('admin.tintuc.list',[
-            'title'=>'Danh sách Tin Tức',
-            'tintucs' => $this->tintucService->getAll()
-        ]);
-    }
+    
     public function delete(Request $request){
         $result = $this->tintucService->delete($request);
         if ($result){
@@ -49,14 +51,14 @@ class TinTucController extends Controller
             'error'=>'true'
         ]);
     }
+
     public function edit(TinTuc $tintuc){
         return view('admin.tintuc.edit',[
-            'title'=>"Sửa Tin Tức",
+            'title'=>"Cập nhật Tin Tức",
             'tintuc' => $tintuc,
-            'theloais' => $this->theloaiService->getAllTheLoai()            
+            'theloais' => $this->theloaiService->getAll()            
         ]);
     }
-
     public function handleEdit($id, Request $request){
         $result = $this->tintucService->edit($id, $request);
         return redirect()->back();

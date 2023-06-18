@@ -9,27 +9,25 @@ class TheLoaiService
 {
     public function create($request){
         try {
-            //
             TheLoai::create([
                 'matheloai'=>(string)$request->input('matheloai'),
                 'tentheloai'=>(string)$request->input('tentheloai'),
                 'mota'=>(string)$request->input('mota'),
             ]);
-            Session()->flash('success','Thêm mới Thể Loại thành công');
+            Session()->flash('success','Thêm mới Thể loại thành công');
+            return true;
         }
-        //xử lý exception, nếu có exception thì lấy ra message và hiển thị ra màn hình.
         catch (Exception $ex){
             Session()->flash('error',$ex->getMessage());
             return false;
         }
-        return true;
     }
 
-    public function getAll(){
+    public function getList(){
         return TheLoai::paginate(2);
     }
 
-    public function getAllTheLoai(){
+    public function getAll(){
         return TheLoai::all();
     }
 
@@ -55,13 +53,13 @@ class TheLoaiService
                     'id'=> $id
                 ]
             );
-            Session()->flash('success','Cập nhật thông tin the loai thành công');
+            Session()->flash('success','Cập nhật thông tin Thể loại thành công');
+            return true;
         }
         catch (Exception $ex){
             Session()->flash('error',$ex->getMessage());
             return false;
         }
-        return true;
 
     }
 }
