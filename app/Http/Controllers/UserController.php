@@ -21,6 +21,20 @@ class UserController extends Controller
         return view('auth.register', ['title'=>'Đăng Ký']);
     }
 
+    public function loginSV(Request $request){
+        $this->validate($request,
+        [
+            'username'=>'required',
+            'password'=> 'required',
+        ]);
+        if($request->input('username') == '21864' && $request->input('password') == '21864'){
+            return redirect()->route('admin');
+        }else{
+            Session()->flash('error','Sai tên đăng nhập hoặc mật khẩu');
+            return redirect()->back();
+        }
+    }
+
     public function login(Request $request){
         $this->validate($request,
         [
@@ -45,9 +59,7 @@ class UserController extends Controller
         ]);
         
         $user = User::create(request(['name', 'email', 'password']));
-        
         auth()->login($user);
-        
         return redirect()->route('admin');
     }
 
