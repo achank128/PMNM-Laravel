@@ -42,49 +42,25 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Quản lý Thể Loại
+                            Quản lý bộ môn
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/admin/theloai" class="nav-link">
+                            <a href="/admin/bomon" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Danh sách thể loại</p>
+                                <p>Danh sách bộ môn</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/theloai/add" class="nav-link">
+                            <a href="/admin/bomon/add" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm mới thể loại</p>
-                            </a>
-                        </li>
-                    </ul>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Quản lý Tin Tức
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/admin/tintuc" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Danh sách Tin Tức</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/tintuc/add" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm mới tin tức</p>
+                                <p>Thêm mới bộ môn</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-            </ul>
-            </li>
             </ul>
         </nav>
     </div>
