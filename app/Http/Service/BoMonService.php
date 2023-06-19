@@ -19,7 +19,7 @@ class BoMonService
             return true;
         }
         catch (Exception $ex){
-            Session()->flash('error',$ex->getMessage());
+            Session()->flash('error', $ex->getMessage());
             return false;
         }
     }
@@ -67,7 +67,7 @@ class BoMonService
             return true;
         }
         catch (Exception $ex){
-            Session()->flash('error',$ex->getMessage());
+            Session()->flash('error', $ex->getMessage());
             return false;
         }
 

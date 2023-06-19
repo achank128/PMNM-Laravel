@@ -36,7 +36,7 @@
                     <td>{{ $bomon->id }}</td>
                     <td>{{ $bomon->mabomon }}</td>
                     <td>{{ $bomon->tenbomon }}</td>
-                    <td>{{ $bomon->mota }}</td>
+                    <td>{!! $bomon->mota !!}</td>
                     <td>{{ $bomon->vanphong }}</td>
                     <td>
                         <a class="btn btn-primary"
