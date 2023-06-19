@@ -14,10 +14,8 @@
                     class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#"
-                    class="d-block"><b>{{ auth()->user()->name }}</b></a>
-                <a href="#"
-                    class="d-block">{{ auth()->user()->email }}</a>
+                <a href="#" class="d-block"><b>Nguyễn Khắc Cháng</b></a>
+                <a href="#" class="d-block">chang21864@huce.edu.vn</a>
             </div>
         </div>
 
