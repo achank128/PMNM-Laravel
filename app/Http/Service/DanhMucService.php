@@ -1,20 +1,20 @@
 <?php
 
 namespace App\Http\Service;
-use App\Models\TheLoai;
+use App\Models\DanhMuc;
 use Exception;
 use Illuminate\Support\Facades\DB;
 
-class TheLoaiService
+class DanhMucService
 {
     public function create($request){
         try {
-            TheLoai::create([
-                'matheloai'=>(string)$request->input('matheloai'),
-                'tentheloai'=>(string)$request->input('tentheloai'),
+            DanhMuc::create([
+                'madanhmuc'=>(string)$request->input('madanhmuc'),
+                'tendanhmuc'=>(string)$request->input('tendanhmuc'),
                 'mota'=>(string)$request->input('mota'),
             ]);
-            Session()->flash('success','Thêm mới Thể loại thành công');
+            Session()->flash('success','Thêm mới Danh mục thành công');
             return true;
         }
         catch (Exception $ex){
@@ -24,36 +24,36 @@ class TheLoaiService
     }
 
     public function getList(){
-        return TheLoai::paginate(2);
+        return DanhMuc::paginate(2);
     }
 
     public function getAll(){
-        return TheLoai::all();
+        return DanhMuc::all();
     }
 
     public function delete($request){
-        $theloai = TheLoai::where('id', $request->input('id'));
-        if($theloai){
-            return $theloai->delete();
+        $danhmuc = DanhMuc::where('id', $request->input('id'));
+        if($danhmuc){
+            return $danhmuc->delete();
         }
     }
 
     public function edit($id,$request){
         try {
-            $theloai = DB::update(
-            'update theloais set 
-            matheloai = :matheloai,
-            tentheloai = :tentheloai,
+            $danhmuc = DB::update(
+            'update danhmucs set 
+            madanhmuc = :madanhmuc,
+            tendanhmuc = :tendanhmuc,
             mota = :mota
             where id = :id',
                 [
-                    'matheloai'=>(string)$request->input('matheloai'),
-                    'tentheloai'=>(string)$request->input('tentheloai'),
+                    'madanhmuc'=>(string)$request->input('madanhmuc'),
+                    'tendanhmuc'=>(string)$request->input('tendanhmuc'),
                     'mota'=>(string)$request->input('mota'),
                     'id'=> $id
                 ]
             );
-            Session()->flash('success','Cập nhật thông tin Thể loại thành công');
+            Session()->flash('success','Cập nhật thông tin Danh mục thành công');
             return true;
         }
         catch (Exception $ex){

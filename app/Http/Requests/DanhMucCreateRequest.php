@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TinTucCreateRequest extends FormRequest
+class DanhMucCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,18 +22,17 @@ class TinTucCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
-            'matintuc'=>'required',
-            'tieude'=>'required',
-            'matheloai'=>'required'
+            'madanhmuc'=>'required',
+            'tendanhmuc'=>'required',
+            'mota'=>'required',
         ];
     }
     public function messages(): array
     {
         return [
-            'matintuc.required' => 'Không được để trống Mã tin tức',
-            'matheloai.required' => 'Không được để trống Mã thể loại',
-            'tieude.required' => 'Không được để trống tiêu đề',
+            'madanhmuc.required' => 'Không được để trống Mã danh mục',
+            'tendanhmuc.required' => 'Không được để trống Tên danh mục',
+            'mota.required' => 'Không được để trống Mô tả',
         ];
     }
 }

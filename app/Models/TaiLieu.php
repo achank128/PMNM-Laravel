@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TinTuc extends Model
+class TaiLieu extends Model
 {
     use HasFactory;
 
-    protected $table = 'tintucs';
+    protected $table = 'tailieus';
 
     protected $fillable = [
-        'matintuc',
-        'tieude',
-        'noidung',
-        'matheloai',
+        'matailieu',
+        'tentailieu',
+        'tomtat',
+        'madanhmuc',
     ];
 }

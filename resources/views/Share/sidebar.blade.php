@@ -40,21 +40,21 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Quản lý Thể Loại
+                            Quản lý danh mục
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/admin/theloai" class="nav-link">
+                            <a href="/admin/danhmuc" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Danh sách thể loại</p>
+                                <p>Danh sách danh mục</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/theloai/add" class="nav-link">
+                            <a href="/admin/danhmuc/add" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm mới thể loại</p>
+                                <p>Thêm mới danh mục</p>
                             </a>
                         </li>
                     </ul>
@@ -62,21 +62,21 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Quản lý Tin Tức
+                            Quản lý tài liệu
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/admin/tintuc" class="nav-link">
+                            <a href="/admin/tailieu" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Danh sách Tin Tức</p>
+                                <p>Danh sách tài liệu</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/tintuc/add" class="nav-link">
+                            <a href="/admin/tailieu/add" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm mới tin tức</p>
+                                <p>Thêm mới tài liệu</p>
                             </a>
                         </li>
                     </ul>

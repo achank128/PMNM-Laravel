@@ -2,7 +2,7 @@
 @section('content')
     <div class="row p-2">
         <div class="col-12 text-right">
-            <a href="/admin/tintuc/add">
+            <a href="/admin/danhmuc/add">
                 <button class="btn btn-primary">Thêm mới</button>
             </a>
         </div>
@@ -11,29 +11,26 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Mã Tin Tức</th>
-                <th>Tiêu Đề</th>
-                <th>Nội Dung</th>
-                <th>Mã Thể Loại</th>
+                <th>Mã Danh mục</th>
+                <th>Tên Danh mục</th>
+                <th>Mô tả</th>
                 <th>Thao tác</th>
             </tr>
         </thead>
 
         <tbody>
-            @foreach ($tintucs as $tintuc)
+            @foreach ($danhmucs as $danhmuc)
                 <tr>
-                    <td>{{ $tintuc->id }}</td>
-                    <td>{{ $tintuc->matintuc }}</td>
-                    <td>{{ $tintuc->tieude }}</td>
-                    <td>{!! $tintuc->noidung !!}</td>
-                    <td>{{ $tintuc->matheloai }}</td>
-
+                    <td>{{ $danhmuc->id }}</td>
+                    <td>{{ $danhmuc->madanhmuc }}</td>
+                    <td>{{ $danhmuc->tendanhmuc }}</td>
+                    <td>{!! $danhmuc->mota !!}</td>
                     <td>
                         <a class="btn btn-primary"
-                            href="/admin/tintuc/edit/{{ $tintuc->id }}">
+                            href="/admin/danhmuc/edit/{{ $danhmuc->id }}">
                             <i class="fas fa-edit"> </i>
                         </a>
-                        <a onclick="removeRow({{ $tintuc->id }},'/admin/tintuc/delete')"
+                        <a onclick="removeRow({{ $danhmuc->id }},'/admin/danhmuc/delete')"
                             class="btn btn-danger" href="#">
                             <i class="fas fa-trash"> </i>
                         </a>
@@ -43,7 +40,7 @@
             @endforeach
         </tbody>
     </table>
-    <div class="ml-4">
-        {{ $tintucs->links() }}
+    <div class="mr-4">
+        {{ $danhmucs->links() }}
     </div>
 @endsection

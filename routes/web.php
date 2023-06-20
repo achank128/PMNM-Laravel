@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\TheLoaiController;
-use App\Http\Controllers\TinTucController;
+use App\Http\Controllers\DanhMucController;
+use App\Http\Controllers\TaiLieuController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,23 +31,23 @@ Route::post('/user/register',[UserController::class,'register']);
 Route::post('/user/logout', [UserController::class,'logout']);
 
 Route::get('/home',[HomeController::class,'index'])->name('admin');
-Route::prefix('/admin/theloai/')->group(function () {
+Route::prefix('/admin/danhmuc/')->group(function () {
     Route::prefix('add')->group(function () {
-        Route::get('/',[TheLoaiController::class,'create']);
-        Route::post('/store',[TheLoaiController::class,'store']);
+        Route::get('/',[DanhMucController::class,'create']);
+        Route::post('/store',[DanhMucController::class,'store']);
     });
-    Route::get('/',[TheLoaiController::class,'index']);
-    Route::get('/edit/{theloai}',[TheLoaiController::class,'edit']);
-    Route::post('/edit/{id}',[TheLoaiController::class,'handleEdit']);
-    Route::DELETE('/delete',[TheLoaiController::class,'delete']);
+    Route::get('/',[DanhMucController::class,'index']);
+    Route::get('/edit/{danhmuc}',[DanhMucController::class,'edit']);
+    Route::post('/edit/{id}',[DanhMucController::class,'handleEdit']);
+    Route::DELETE('/delete',[DanhMucController::class,'delete']);
 });
-Route::prefix('/admin/tintuc/')->group(function () {
+Route::prefix('/admin/tailieu/')->group(function () {
     Route::prefix('add')->group(function () {
-        Route::get('/',[TinTucController::class,'create']);
-        Route::post('/store',[TinTucController::class,'store']);
+        Route::get('/',[TaiLieuController::class,'create']);
+        Route::post('/store',[TaiLieuController::class,'store']);
     });
-    Route::get('/',[TinTucController::class,'index']);
-    Route::get('/edit/{tintuc}',[TinTucController::class,'edit']);
-    Route::post('/edit/{id}',[TinTucController::class,'handleEdit']);
-    Route::DELETE('/delete',[TinTucController::class,'delete']);
+    Route::get('/',[TaiLieuController::class,'index']);
+    Route::get('/edit/{tailieu}',[TaiLieuController::class,'edit']);
+    Route::post('/edit/{id}',[TaiLieuController::class,'handleEdit']);
+    Route::DELETE('/delete',[TaiLieuController::class,'delete']);
 });

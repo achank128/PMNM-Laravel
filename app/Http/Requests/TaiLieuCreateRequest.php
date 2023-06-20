@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TheLoaiCreateRequest extends FormRequest
+class TaiLieuCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,17 +22,20 @@ class TheLoaiCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'matheloai'=>'required',
-            'tentheloai'=>'required',
-            'mota'=>'required',
+            //
+            'matailieu'=>'required',
+            'tentailieu'=>'required',
+            'tomtat'=>'required',
+            'madanhmuc'=>'required'
         ];
     }
     public function messages(): array
     {
         return [
-            'matheloai.required' => 'Không được để trống Mã thể loại',
-            'tentheloai.required' => 'Không được để trống Tên thể loại',
-            'mota.required' => 'Không được để trống Mô tả',
+            'matailieu.required' => 'Không được để trống Mã tài liệu',
+            'tentailieu.required' => 'Không được để trống Tên tài liệu',
+            'tomtat.required' => 'Không được để trống tóm tắt',
+            'madanhmuc.required' => 'Không được để trống Mã danh mục',
         ];
     }
 }
