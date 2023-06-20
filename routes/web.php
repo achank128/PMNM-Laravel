@@ -21,14 +21,7 @@ Route::get('/', function () {
     return view('login', ['title'=>'Đăng nhập']);
 });
 
-Route::get('/user',[UserController::class,'index']);
-
-Route::post('/loginsv',[UserController::class,'loginSV']);
-Route::get('/login',[UserController::class,'loginView'])->name('login');
-Route::get('/register',[UserController::class,'registerView'])->name('register');
-Route::post('/user/login',[UserController::class,'login']);
-Route::post('/user/register',[UserController::class,'register']);
-Route::post('/user/logout', [UserController::class,'logout']);
+Route::post('/loginsv',[UserController::class,'login']);
 
 Route::get('/home',[HomeController::class,'index'])->name('admin');
 Route::prefix('/admin/danhmuc/')->group(function () {

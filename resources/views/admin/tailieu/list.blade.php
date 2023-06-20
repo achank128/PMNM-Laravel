@@ -12,11 +12,6 @@
                 <button class="btn btn-primary w-25">Sắp xếp</button>
             </form>
         </div>
-        <div class="col-6 text-right">
-            <a href="/admin/tailieu/add">
-                <button class="btn btn-primary">Thêm mới</button>
-            </a>
-        </div>
     </div>
     <table class="table table-striped">
         <thead>

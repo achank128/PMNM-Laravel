@@ -15,15 +15,6 @@
                         role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
-
-            <ul class="navbar-nav ml-auto">
-                <!-- Log out-->
-                <li>
-                    <a href="/">
-                        <button class="btn btn-danger">Log out</button>
-                    </a>
-                </li>
-            </ul>
         </nav>
 
         @include('Share.sidebar')
@@ -47,13 +38,6 @@
                 </div>
             </section>
         </div>
-
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 1.0.0
-            </div>
-            <strong>Copyright &copy; 2023 <a href="#">NKC</a>.</strong>
-        </footer>
 
         <aside class="control-sidebar control-sidebar-dark">
         </aside>

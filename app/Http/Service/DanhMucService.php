@@ -24,7 +24,7 @@ class DanhMucService
     }
 
     public function getList(){
-        return DanhMuc::paginate(2);
+        return DanhMuc::paginate(5);
     }
 
     public function getAll(){

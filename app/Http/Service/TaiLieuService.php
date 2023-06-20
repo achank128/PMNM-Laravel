@@ -38,7 +38,7 @@ class TaiLieuService
         else if($request->sortBy == 'ma_asc'){
             $tailieus->orderBy('matailieu', 'asc');
         }
-        return $tailieus->paginate(2);
+        return $tailieus->paginate(5);
     }
 
     public function getAll(){

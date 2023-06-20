@@ -1,12 +1,5 @@
 @extends('admin.main')
 @section('content')
-    <div class="row p-2">
-        <div class="col-12 text-right">
-            <a href="/admin/danhmuc/add">
-                <button class="btn btn-primary">Thêm mới</button>
-            </a>
-        </div>
-    </div>
     <table class="table table-striped">
         <thead>
             <tr>
