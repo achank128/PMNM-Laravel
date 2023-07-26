@@ -1,19 +1,19 @@
 @extends('admin.main')
 @section('content')
-    <form action="/admin/lop/add/store" method="post">
+    <form action="/admin/theloai/add/store" method="post">
         @include('share.error')
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Mã lớp học</label>
-                <input type="text" name="malop" class="form-control" id="malop" placeholder="Nhập mã lớp học">
+                <label for="exampleInputEmail1">Mã Thể Loại</label>
+                <input type="text" name="matheloai" class="form-control" id="matheloai" placeholder="Nhập mã thể loại">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Tên lớp học</label>
-                <input type="text" name="tenlop" class="form-control" id="tenlop" placeholder="Nhập tên lớp học">
+                <label for="exampleInputPassword1">Tên Thể loại</label>
+                <input type="text" name="tentheloai" class="form-control" id="tentheloai" placeholder="Nhập tên thể loại">
             </div>
 {{--            <div class="form-group">--}}
 {{--                <label for="exampleInputPassword1">Mô tả</label>--}}
-{{--                <input type="text" name="mota" class="form-control" id="mota" placeholder="Nhập mô tả lớp học">--}}
+{{--                <input type="text" name="mota" class="form-control" id="mota" placeholder="Nhập mô tả">--}}
 {{--            </div>--}}
             <div class="form-group">
                 <label for="exampleInputPassword1">Mô tả</label>
@@ -25,14 +25,6 @@
                     // instance, using default configuration.
                     CKEDITOR.replace( 'mota' );
                 </script>
-
-            </div>
-
-
-            <div class="form-group">
-                <label for="exampleInputPassword1">Số lượng sinh viên</label>
-                <input type="number" name="soluongsv" class="form-control" id="soluongsv"
-                       placeholder="Nhập số lượng sinh viên">
             </div>
         </div>
         <!-- /.card-body -->

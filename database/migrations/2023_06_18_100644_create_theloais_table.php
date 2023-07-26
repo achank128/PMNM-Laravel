@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lop_mon_hocs', function (Blueprint $table) {
+        Schema::create('theloais', function (Blueprint $table) {
             $table->id();
-            $table->string('MaLop',255);
-            $table->string('TenLop');
-            $table->longText('MoTa');
-            $table->integer('SoLuongSV');
+            $table->string('matheloai',50);
+            $table->string('tentheloai',255);
+            $table->longText('mota');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lop_mon_hocs');
+        Schema::dropIfExists('theloais');
     }
 };
